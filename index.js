@@ -26,7 +26,7 @@ app.use(expresswinston.logger({
 
 app.use(cors());
 app.use(express.json())
-app.use('/Product',ProductRouter);
+app.use('/product',ProductRouter);
 
 // Error log set up
 app.use(expresswinston.errorLogger({
