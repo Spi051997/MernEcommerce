@@ -4,7 +4,8 @@ const dotenv=require('dotenv');
 const cors=require('cors');
 const winston=require('winston');
 const expresswinston=require('express-winston');
-const ProductRouter=require('./routes/ProductRouter')
+const ProductRouter=require('./routes/ProductRouter');
+const Reviewrotes=require('./routes/Reviewrotes')
 // db connection
 const mongoose=require('./config/mongoose');
 mongoose;
@@ -27,6 +28,7 @@ app.use(expresswinston.logger({
 app.use(cors());
 app.use(express.json())
 app.use('/product',ProductRouter);
+app.use('/routes',Reviewrotes);
 
 // Error log set up
 app.use(expresswinston.errorLogger({
