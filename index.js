@@ -6,6 +6,7 @@ const winston=require('winston');
 const expresswinston=require('express-winston');
 const ProductRouter=require('./routes/ProductRouter');
 const Reviewrotes=require('./routes/Reviewrotes')
+const CategoryRoutes=require('./routes/CategoryRoutes')
 // db connection
 const mongoose=require('./config/mongoose');
 mongoose;
@@ -29,6 +30,8 @@ app.use(cors());
 app.use(express.json())
 app.use('/product',ProductRouter);
 app.use('/routes',Reviewrotes);
+app.use('/category',CategoryRoutes)
+
 
 // Error log set up
 app.use(expresswinston.errorLogger({
