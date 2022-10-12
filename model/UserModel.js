@@ -10,7 +10,7 @@ const usermodel = mongoose.Schema({
   City: { type: String, required: true },
   State: { type: String, required: true },
   Password: { type: String, required: true },
-  is_Admin: { type: String, required: true, default: false },
+  is_Admin: { type: Boolean, required: true, default: false },
 });
 
 const User=mongoose.model("User",usermodel);

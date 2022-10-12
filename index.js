@@ -8,6 +8,7 @@ const ProductRouter=require('./routes/ProductRouter');
 const Reviewrotes=require('./routes/Reviewrotes')
 const CategoryRoutes=require('./routes/CategoryRoutes')
 const UserRoutes=require('./routes/UserRoutes');
+const Orderroutes=require('./routes/Orderroutes');
 // db connection
 const mongoose=require('./config/mongoose');
 mongoose;
@@ -33,6 +34,7 @@ app.use('/product',ProductRouter);
 app.use('/routes',Reviewrotes);
 app.use('/category',CategoryRoutes);
 app.use('/user',UserRoutes)
+app.use('/order',Orderroutes);
 
 
 // Error log set up
