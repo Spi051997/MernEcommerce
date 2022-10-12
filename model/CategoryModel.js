@@ -11,6 +11,9 @@ const categorymodel=mongoose.Schema({
 
 })
 
+// Adding index in Schema to make arragement of data in Ascending Order
+categorymodel.index({description:1});
+
 const Category=mongoose.model("CategoryModel",categorymodel);
 
 module.exports=Category

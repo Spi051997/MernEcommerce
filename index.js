@@ -1,5 +1,6 @@
 const express=require('express');
 const app=express();
+const colors=require('colors')
 const dotenv=require('dotenv');
 const cors=require('cors');
 const winston=require('winston');
@@ -9,6 +10,7 @@ const Reviewrotes=require('./routes/Reviewrotes')
 const CategoryRoutes=require('./routes/CategoryRoutes')
 const UserRoutes=require('./routes/UserRoutes');
 const Orderroutes=require('./routes/Orderroutes');
+
 // db connection
 const mongoose=require('./config/mongoose');
 mongoose;
@@ -51,7 +53,7 @@ app.use(expresswinston.errorLogger({
 
 
 app.listen(PORT,()=>{
-    console.log(`Server is runnning at ${PORT}`)
+    console.log(`Server is runnning at ${PORT}`.green.bgRed)
 })
 
 
